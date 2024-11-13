@@ -1,0 +1,34 @@
+Lines:
+  # Train Acc
+  - label: "SISSA-LSTM Train Acc"
+    type: "acc"
+    dataPath: "results/train/SISSA_LSTM_N128/statistics/train_acc.npy"
+    hexColor: "#bababa"  # light gray
+    lineStyle: "dashed"
+  - label: "MDHP-Net Train Acc"
+    type: "acc"
+    dataPath: "results/train/MDHP_NET_N128/statistics/train_acc.npy"
+    lineStyle: "dashed"
+    hexColor: "#3b3b3b"  # gray
+  # Val Acc
+  - label: "SISSA-LSTM Val Acc"
+    type: "acc"
+    dataPath: "results/train/SISSA_LSTM_N128/statistics/val_acc.npy"
+    hexColor: "#08b8c4"  # cyan
+    lineStyle: "solid"
+  - label: "MDHP-Net Val Acc"
+    type: "acc"
+    dataPath: "results/train/MDHP_NET_N128/statistics/val_acc.npy"
+    hexColor: "#0419d4"  # blue
+    lineStyle: "solid"
+  # Train Loss
+  - label: "SISSA-LSTM Train Loss"
+    type: "loss"
+    dataPath: "results/train/SISSA_LSTM_N128/statistics/train_loss.npy"
+    hexColor: "#ff8400"  # orange
+    lineStyle: "solid"
+  - label: "MDHP-Net Train Loss"
+    type: "loss"
+    dataPath: "results/train/MDHP_NET_N128/statistics/train_loss.npy"
+    hexColor: "#ff0000"  # red
+    lineStyle: "solid"

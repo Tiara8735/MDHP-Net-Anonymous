@@ -1,0 +1,33 @@
+RandomSeed: 2024
+
+Model:
+  module: mdhpnet.models.sissa_lstm
+  typename: SISSA_LSTM
+  params:
+    n_seq: &N_SEQ 128
+    input_dim: 25
+    hidden_dim: 128
+    output_dim: 2
+    n_lstm: 2
+  # Assume that the checkpoint is saved in the following directory:
+  # "./results/train/{model_name}_N{n_seq}/ckpt"
+  # If `ckpt_path` is set to NULL, it will be tried to find a pth file 
+  # starting with "val_best" in the directory
+  ckpt_path: NULL
+
+TestDataLoader:
+  Dataset:
+    module: mdhpnet.datasets.some_ip_dataset
+    typename: SomeIP_Dataset
+    params:
+      data_dir: ./data/rate_0.4_victim_4/val
+      n_seq: *N_SEQ
+  batch_size: 128
+  shuffle: False
+  num_workers: 1
+  pin_memory: True
+
+TestPipeline:
+  device: cuda:0
+  statistics_save_dir: NULL
+  logger_name: TEST

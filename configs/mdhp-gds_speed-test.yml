@@ -1,0 +1,86 @@
+GlobalConfigs:
+  random_seed: &RANDOM_SEED 2024
+  device: &DEVICE cuda:1 # cpu or cuda:n
+  use_torch_compile: &USE_TORCH_COMPILE True
+  optimize_likelihood: &OPTIMIZE_LIKELIHOOD True  # You'd better set this to True or it would be very, very slow 🤣.
+
+TestConfigs:
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 5
+    max_timestamp_len: 10
+    min_timestamp_len: 5
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 10
+    max_timestamp_len: 100
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+    
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 15
+    max_timestamp_len: 100
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+  
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 20
+    max_timestamp_len: 100
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 25
+    max_timestamp_len: 100
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 30
+    max_timestamp_len: 100
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 30
+    max_timestamp_len: 150
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD
+
+  - random_seed: *RANDOM_SEED
+    device: *DEVICE
+    n_message_windows: 25
+    n_warmup_windows: 10
+    mdhp_dim: 30
+    max_timestamp_len: 200
+    min_timestamp_len: 50
+    use_torch_compile: *USE_TORCH_COMPILE
+    optimize_likelihood: *OPTIMIZE_LIKELIHOOD

@@ -1,0 +1,35 @@
+MDHP_NET_DIRS:
+  - results/test/MDHP_NET_N32/statistics
+  - results/test/MDHP_NET_N48/statistics
+  - results/test/MDHP_NET_N64/statistics
+  - results/test/MDHP_NET_N80/statistics
+  - results/test/MDHP_NET_N96/statistics
+  - results/test/MDHP_NET_N112/statistics
+  - results/test/MDHP_NET_N128/statistics
+
+SISSA_LSTM_DIRS:
+  - results/test/SISSA_LSTM_N32/statistics
+  - results/test/SISSA_LSTM_N48/statistics
+  - results/test/SISSA_LSTM_N64/statistics
+  - results/test/SISSA_LSTM_N80/statistics
+  - results/test/SISSA_LSTM_N96/statistics
+  - results/test/SISSA_LSTM_N112/statistics
+  - results/test/SISSA_LSTM_N128/statistics
+
+SISSA_RNN_DIRS:
+  - results/test/SISSA_RNN_N32/statistics
+  - results/test/SISSA_RNN_N48/statistics
+  - results/test/SISSA_RNN_N64/statistics
+  - results/test/SISSA_RNN_N80/statistics
+  - results/test/SISSA_RNN_N96/statistics
+  - results/test/SISSA_RNN_N112/statistics
+  - results/test/SISSA_RNN_N128/statistics
+
+SISSA_CNN_DIRS:
+  - results/test/SISSA_CNN_N32/statistics
+  - results/test/SISSA_CNN_N48/statistics
+  - results/test/SISSA_CNN_N64/statistics
+  - results/test/SISSA_CNN_N80/statistics
+  - results/test/SISSA_CNN_N96/statistics
+  - results/test/SISSA_CNN_N112/statistics
+  - results/test/SISSA_CNN_N128/statistics

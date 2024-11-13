@@ -1,0 +1,56 @@
+RandomSeed: 2024
+
+Model:
+  module: mdhpnet.models.mdhp_net
+  typename: MDHP_NET
+  params:
+    n_seq: &N_SEQ 128
+    input_dim: 25
+    hidden_dim: 128
+    output_dim: 2
+    mdhp_dim: 16
+    n_mdhp_lstm: 2
+
+TrainDataLoader:
+  Dataset:
+    module: mdhpnet.datasets.some_ip_mdhp_dataset
+    typename: SomeIP_MDHP_Dataset
+    params:
+      data_dir: ./data/rate_0.4_victim_4/train
+      n_seq: *N_SEQ
+  batch_size: 128
+  shuffle: False
+  num_workers: 4
+
+ValDataLoader:
+  Dataset:
+    module: mdhpnet.datasets.some_ip_mdhp_dataset
+    typename: SomeIP_MDHP_Dataset
+    params:
+      data_dir: ./data/rate_0.4_victim_4/val
+      n_seq: *N_SEQ
+  batch_size: 128
+  shuffle: False
+  num_workers: 4
+
+Criterion:
+  module: torch.nn
+  typename: CrossEntropyLoss
+  params: {}
+
+Optimizer:
+  module: torch.optim
+  typename: AdamW
+  params:
+    lr: 5e-5
+    weight_decay: 5e-5
+
+TrainPipeline:
+  # `chkpt_save_dir` and `statistics_save_dir` will be generated automatically 
+  # if set to NULL. You can also specify them manually.
+  # @see "mdhpnet/utils/train_pipelines.py:distTrainPipeline()"
+  n_epochs: 50
+  ckpt_save_dir: NULL
+  ckpt_save_interval: 5
+  statistics_save_dir: NULL
+  logger_name: TRAIN

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdhpnet"
+version = "0.1.0"
+description = "MDHP-Net: A Deep Learning Network based on Multi-Dimensional Hawkes Process"
+authors = [{ name = "tiara8735", email = "tiara8735@anonymous.com" }]
+readme = "README.md"
+requires-python = ">=3.10, <3.13"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision",
+    "torchaudio",
+    "numpy",
+    "scipy>=1.12.0",
+    "concurrent_log_handler",
+    "ruamel.yaml",
+    "easydict",
+    "tqdm",
+    "scikit-learn",
+    "torchinfo",
+    "matplotlib",
+]
+
+[tool.setuptools]
+packages = ["mdhpnet"]
+package-dir = { "" = "." }
