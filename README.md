@@ -1,7 +1,7 @@
-# \[Anonymous\]  MDHP-Net
-Multi-Dimensional Hawkes Process Network
+# MDHP-Net-Anonymous
+\[**Anonymous**\] Multi-Dimensional Hawkes Process Network
 
-⚠️ The corresponding paper for this repository is currently under review. Following the double-blind principle, this GitHub account and the repository are anonymous. Prior to the completion of the review process, the code in this repository **should not be used or cited**, and should only be used for reproducing experimental results related to the paper. After the review process, this repository will be deleted, and the official code will be made public under the author's GitHub account.
+⚠️ The corresponding paper for this repository is currently under review. Following the double-blind principle, this GitHub account and the repository are anonymous. Prior to the completion of the review process, the code in this repository **SHOULD NOT be refered or cited**, and may only be used for reproducing experimental results related to the paper. After the review process, this repository will be deleted, and the official code will be made public under the author's GitHub account.
 
 ## 1. Environment and Dependencies
 
@@ -99,7 +99,3 @@ python scripts/mdhp-gds_speed_test.py
 ```
 
 The results will be saved in the "[results](results)" directory by default.
-
-## 7. Citation
-
-...
